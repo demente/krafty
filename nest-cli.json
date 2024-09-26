@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/krafty/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/krafty/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/krafty",
+  "projects": {
+    "krafty": {
+      "type": "application",
+      "root": "apps/krafty",
+      "entryFile": "main",
+      "sourceRoot": "apps/krafty/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/krafty/tsconfig.app.json"
+      }
+    },
+    "users": {
+      "type": "application",
+      "root": "apps/users",
+      "entryFile": "main",
+      "sourceRoot": "apps/users/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/users/tsconfig.app.json"
+      }
+    },
+    "products": {
+      "type": "application",
+      "root": "apps/products",
+      "entryFile": "main",
+      "sourceRoot": "apps/products/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/products/tsconfig.app.json"
+      }
+    }
+  }
+}
